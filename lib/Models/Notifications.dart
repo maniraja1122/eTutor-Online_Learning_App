@@ -1,13 +1,14 @@
 
+import '../Repository/DBHelper.dart';
+
 class Notifications{
   int key=DateTime.now().microsecondsSinceEpoch;
-  String userkey="";
-  String text="";
+  String userkey=DBHelper.auth.currentUser!.uid;
+  String text="Course Successfully Enrolled";
 
 //<editor-fold desc="Data Methods">
 
   Notifications({
-    required this.userkey,
     required this.text,
   });
 
@@ -38,7 +39,6 @@ class Notifications{
     String? text,
   }) {
     return Notifications(
-      userkey: userkey ?? this.userkey,
       text: text ?? this.text,
     );
   }
@@ -53,7 +53,6 @@ class Notifications{
 
   factory Notifications.fromMap(Map<String, dynamic> map) {
     return Notifications(
-      userkey: map['userkey'] as String,
       text: map['text'] as String,
     );
   }

@@ -2,6 +2,8 @@ import 'package:etutor/RegisterProcess/Login.dart';
 import 'package:etutor/RegisterProcess/Selector.dart';
 import 'package:etutor/Routes/AppRoutes.dart';
 import 'package:etutor/Views/HomePage.dart';
+import 'package:etutor/Views/ViewNotifications.dart';
+import 'package:etutor/Views/wishListView.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import '../RegisterProcess/Signup.dart';
 
@@ -11,5 +13,7 @@ class AppPages {
     GetPage(name: AppRoutes.Login, page: () => Login()),
     GetPage(name: AppRoutes.Register, page: () => Signup()),
     GetPage(name: AppRoutes.Home, page: () => HomePage()),
+    GetPage(name: AppRoutes.WishList, page: () => wishListView()),
+    GetPage(name: AppRoutes.ViewNotifications, page: () => ViewNotifications()),
   ];
 }

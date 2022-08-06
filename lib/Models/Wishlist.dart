@@ -1,11 +1,12 @@
+import 'package:etutor/Repository/DBHelper.dart';
+
 class Wishlist{
-  String userkey="";
+  String userkey=DBHelper.auth.currentUser!.uid;
   String coursekey="";
 
 //<editor-fold desc="Data Methods">
 
   Wishlist({
-    required this.userkey,
     required this.coursekey,
   });
 
@@ -33,7 +34,6 @@ class Wishlist{
     String? coursekey,
   }) {
     return Wishlist(
-      userkey: userkey ?? this.userkey,
       coursekey: coursekey ?? this.coursekey,
     );
   }
@@ -47,7 +47,6 @@ class Wishlist{
 
   factory Wishlist.fromMap(Map<String, dynamic> map) {
     return Wishlist(
-      userkey: map['userkey'] as String,
       coursekey: map['coursekey'] as String,
     );
   }

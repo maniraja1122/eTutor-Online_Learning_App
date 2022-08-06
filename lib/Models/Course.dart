@@ -4,7 +4,7 @@ class Course{
   String desc="";
   double price=0;
   String imageurl="";
-
+  int totalEnrollments=0;
 //<editor-fold desc="Data Methods">
 
   Course({

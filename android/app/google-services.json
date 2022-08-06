@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "637158543994",
+    "project_id": "etutor-9e832",
+    "storage_bucket": "etutor-9e832.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637158543994:android:590f34df3a7196fcb821c3",
+        "android_client_info": {
+          "package_name": "com.example.etutor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637158543994-ckf2stbcsncfjt6tuqp6rar2vahc7d50.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMv-LZSVt5aKt4mj5Z87OQ4EmX0GQ8hv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637158543994-ckf2stbcsncfjt6tuqp6rar2vahc7d50.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "637158543994-hmr27muavudncr120oknl61jp759v0sq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.etutor"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

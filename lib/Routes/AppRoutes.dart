@@ -5,4 +5,6 @@ class AppRoutes{
   static String Login="/login";
   static String Register="/signup";
   static String Home="/home";
+  static String WishList="/wishlist";
+  static String ViewNotifications="/notifications";
 }
