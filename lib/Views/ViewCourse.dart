@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:etutor/Models/Enrolled.dart';
 import 'package:etutor/Models/Notifications.dart';
+import 'package:etutor/Views/FullCourse.dart';
 import 'package:etutor/Widgets/BackBtn.dart';
 import 'package:etutor/Widgets/RoundButton.dart';
 import 'package:flutter/material.dart';
@@ -241,7 +242,7 @@ class ViewCourse extends StatelessWidget {
                           bacground: Colors.blue,
                           foreground: Colors.white,
                           onPressed: () {
-                            //Todo Go to course from view page
+                            Get.to(FullCourse(coursekey: snap.get("key"),));
                           });
                     }
                   }

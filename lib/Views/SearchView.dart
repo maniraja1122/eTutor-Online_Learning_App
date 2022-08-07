@@ -1,15 +1,25 @@
+import 'dart:async';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:etutor/Controllers/HomeController.dart';
 import 'package:etutor/ListItems/CourseItem.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_keyboard_visibility/flutter_keyboard_visibility.dart';
 import 'package:get/get.dart';
 
 import '../Repository/DBHelper.dart';
 
 class SearchView extends GetView {
+
+
+
   @override
   Widget build(BuildContext context) {
     var _controller=Get.find<HomeController>();
+    var keycontroller=KeyboardVisibilityController();
+    keycontroller.onChange.listen((visible) {
+      _controller.showNavBar.value=!visible;
+    });
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -18,7 +28,7 @@ class SearchView extends GetView {
           child: Container(
             clipBehavior: Clip.hardEdge,
             decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
-            child: TextFormField(
+            child: TextField(
               onChanged: (val){
                   _controller.searchTerm.value=val;
               },

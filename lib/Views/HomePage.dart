@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 class HomePage extends GetView {
+
   @override
   Widget build(BuildContext context) {
     PersistentTabController navcontroller;
@@ -49,12 +50,13 @@ class HomePage extends GetView {
         ),
       ];
     }
-    return PersistentTabView(
+    return Obx(() => PersistentTabView(
       context,
       controller: navcontroller,
       screens: _buildScreens(),
       items: _navBarsItems(),
       confineInSafeArea: true,
+      hideNavigationBar: !_controller.showNavBar.value,
       decoration: NavBarDecoration(
         borderRadius: BorderRadius.circular(10.0),
         colorBehindNavBar: Colors.white,
@@ -71,7 +73,7 @@ class HomePage extends GetView {
         duration: Duration(milliseconds: 200),
       ),
       navBarStyle: NavBarStyle.style1, // Choose the nav bar style with this property.
-    );
+    ));
 
   }
 }

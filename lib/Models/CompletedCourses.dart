@@ -1,13 +1,14 @@
 
 
+import 'package:etutor/Repository/DBHelper.dart';
+
 class CompletedCourses{
-  String userkey="";
+  String userkey=DBHelper.auth.currentUser!.uid;
   String coursekey="";
 
 //<editor-fold desc="Data Methods">
 
   CompletedCourses({
-    required this.userkey,
     required this.coursekey,
   });
 
@@ -35,7 +36,6 @@ class CompletedCourses{
     String? coursekey,
   }) {
     return CompletedCourses(
-      userkey: userkey ?? this.userkey,
       coursekey: coursekey ?? this.coursekey,
     );
   }
@@ -49,7 +49,6 @@ class CompletedCourses{
 
   factory CompletedCourses.fromMap(Map<String, dynamic> map) {
     return CompletedCourses(
-      userkey: map['userkey'] as String,
       coursekey: map['coursekey'] as String,
     );
   }

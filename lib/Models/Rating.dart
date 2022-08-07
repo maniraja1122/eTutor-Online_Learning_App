@@ -1,18 +1,17 @@
 
 
+import '../Repository/DBHelper.dart';
+
 class Rating{
-  String userkey="";
+  String userkey=DBHelper.auth.currentUser!.uid;
   String coursekey="";
   double rating=0;
-  String comment="";
 
 //<editor-fold desc="Data Methods">
 
   Rating({
-    required this.userkey,
     required this.coursekey,
     required this.rating,
-    required this.comment,
   });
 
   @override
@@ -22,15 +21,13 @@ class Rating{
           runtimeType == other.runtimeType &&
           userkey == other.userkey &&
           coursekey == other.coursekey &&
-          rating == other.rating &&
-          comment == other.comment);
+          rating == other.rating);
 
   @override
   int get hashCode =>
       userkey.hashCode ^
       coursekey.hashCode ^
-      rating.hashCode ^
-      comment.hashCode;
+      rating.hashCode;
 
   @override
   String toString() {
@@ -38,7 +35,6 @@ class Rating{
         ' userkey: $userkey,' +
         ' coursekey: $coursekey,' +
         ' rating: $rating,' +
-        ' comment: $comment,' +
         '}';
   }
 
@@ -46,13 +42,10 @@ class Rating{
     String? userkey,
     String? coursekey,
     double? rating,
-    String? comment,
   }) {
     return Rating(
-      userkey: userkey ?? this.userkey,
       coursekey: coursekey ?? this.coursekey,
       rating: rating ?? this.rating,
-      comment: comment ?? this.comment,
     );
   }
 
@@ -61,16 +54,13 @@ class Rating{
       'userkey': this.userkey,
       'coursekey': this.coursekey,
       'rating': this.rating,
-      'comment': this.comment,
     };
   }
 
   factory Rating.fromMap(Map<String, dynamic> map) {
     return Rating(
-      userkey: map['userkey'] as String,
       coursekey: map['coursekey'] as String,
       rating: map['rating'] as double,
-      comment: map['comment'] as String,
     );
   }
 
