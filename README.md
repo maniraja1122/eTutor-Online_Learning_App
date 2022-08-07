@@ -1,17 +1,23 @@
-# etutor
+# eTutor 
+An Online Learning Platform made with Flutter
+ <br>
+### Features : <br>
+<ul>
+<li>Enroll in courses. Each course consist of many video lessons.<br>
+<li>See the course progress (Completed/In Progress)<br>
+<li>Searching Courses <br>
+<li>Give rating to your completed courses <br>
+<li>Login/Sign up<br>
+<li>Maintain Basic Profile<br>
+<li>Your personal wishlist<br>
+<li>Check notification logs<br>
+</ul>
+ <br>
+### Note all the pages are dynamic and are updated in real time
+<br>
 
-A new Flutter project.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+### Video Preview
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# eTutor-Online_Learning_App
+[![eTutor](https://img.youtube.com/vi/OqkDX27q1AU/0.jpg)](https://www.youtube.com/watch?v=OqkDX27q1AU)
